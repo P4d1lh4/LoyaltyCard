@@ -4,6 +4,7 @@ import br.gov.cesarschool.poo.fidelidade.cartao.dao.CartaoFidelidadeDAO;
 import br.gov.cesarschool.poo.fidelidade.cartao.dao.LancamentoExtratoDAO;
 import br.gov.cesarschool.poo.fidelidade.cartao.entidade.TipoResgate;
 import br.gov.cesarschool.poo.fidelidade.cliente.entidade.Cliente;
+import java.time.LocalDateTime;
 
 public class CartaoFidelidadeMediator {
 	private CartaoFidelidadeDAO repositorioCartao;
@@ -23,6 +24,7 @@ public class CartaoFidelidadeMediator {
 	}
 	
 	public long gerarCartao(Cliente cliente) {
+		String cpf = cliente.getCpf();
 		return 0;
 	}
 	
