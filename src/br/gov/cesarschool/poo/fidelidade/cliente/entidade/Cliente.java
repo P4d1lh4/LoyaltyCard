@@ -1,10 +1,11 @@
-package br.gov.cesarschool.poo.fidelidade.cliente.negocio;
+package br.gov.cesarschool.poo.fidelidade.cliente.entidade;
 
-import br.gov.cesarschool.poo.fidelidade.geral.negocio.Endereco;
-import br.gov.cesarschool.poo.fidelidade.geral.negocio.Sexo;
 import java.util.Date;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+
+import br.gov.cesarschool.poo.fidelidade.geral.entidade.Endereco;
+import br.gov.cesarschool.poo.fidelidade.geral.entidade.Sexo;
+
+import java.util.Calendar;
 
 public class Cliente {
 	private String cpf;
@@ -72,14 +73,10 @@ public class Cliente {
 	}
 	
 	public int obterIdade() {
-		Date currentDate = new Date();
-		return Duration.between(currentDate, dataDeNascimento);
-	}
-	
-	private LocalDateTime converterDateParaLocalDateTime(Date date) {
-		
-		return date.toInstant().atZone(ZoneId.systemDefault()).toInstant();
-				
+		Calendar currentDate = Calendar.getInstance();
+		Calendar birthDate = Calendar.getInstance();
+		birthDate.setTime(this.dataDeNascimento);
+		return currentDate - birthDate;
 	}
 	
 }

@@ -1,13 +1,13 @@
-package br.gov.cesarschool.poo.fidelidade.cartao.negocio;
+package br.gov.cesarschool.poo.fidelidade.cartao.entidade;
 
-import java.util.Date;
+import java.util.LocalDateTime;
 
 public class LancamentoExtrato {
 	private long numeroCartao;
 	private int quantidadePontos;
-	private Date dataHoraLancamento;
+	private LocalDateTime dataHoraLancamento;
 	
-	public LancamentoExtrato(long numeroCartao, int quantidadePontos, Date dataHoraLancamento) {
+	public LancamentoExtrato(long numeroCartao, int quantidadePontos, LocalDateTime dataHoraLancamento) {
 		this.numeroCartao = numeroCartao;
 		this.quantidadePontos = quantidadePontos;
 		this.dataHoraLancamento = dataHoraLancamento;
@@ -21,7 +21,7 @@ public class LancamentoExtrato {
 		return quantidadePontos;
 	}
 
-	public Date getDataHoraLancamento() {
+	public LocalDateTime getDataHoraLancamento() {
 		return dataHoraLancamento;
 	}
 	
