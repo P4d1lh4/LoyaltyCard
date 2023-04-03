@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author arroi
+ *
+ */
+module LoyaltyCard {
+}
