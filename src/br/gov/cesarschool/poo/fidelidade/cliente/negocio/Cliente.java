@@ -1,9 +1,10 @@
 package br.gov.cesarschool.poo.fidelidade.cliente.negocio;
 
-import java.util.Date;
-
 import br.gov.cesarschool.poo.fidelidade.geral.negocio.Endereco;
 import br.gov.cesarschool.poo.fidelidade.geral.negocio.Sexo;
+import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class Cliente {
 	private String cpf;
@@ -75,5 +76,10 @@ public class Cliente {
 		return Duration.between(currentDate, dataDeNascimento);
 	}
 	
+	private LocalDateTime converterDateParaLocalDateTime(Date date) {
+		
+		return date.toInstant().atZone(ZoneId.systemDefault()).toInstant();
+				
+	}
 	
 }
